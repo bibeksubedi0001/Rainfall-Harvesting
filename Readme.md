@@ -24,15 +24,6 @@ This project calculates and visualizes the potential for rainwater harvesting in
 
 ---
 
-## Project Structure
-
-Rainfall-Analysis/ │ ├── rainfall_analysis.py # Main script for analysis and visualizations ├── data/ │ ├── Building_Rooftop_Area_Data.csv # Rooftop data (input file) │ ├── Precipitation_Data.csv # Rainfall data (input file) ├── plots/ # Directory for saved visualizations │ ├── monthly_rainfall.png │ ├── seasonal_contribution.png │ ├── cumulative_rainfall.png │ ├── efficiency_simulation.png │ ├── rainfall_distribution.png │ ├── rainfall_boxplot.png │ ├── top_buildings.png │ ├── rainwater_potential.csv # Building-wise rainwater potential (output) ├── daily_rainfall.csv # Daily rainfall and trends (output) └── README.md # Project documentation
-
-markdown
-Copy code
-
----
-
 ## Input Data
 
 1. **Building Rooftop Area Data**:
@@ -57,20 +48,15 @@ Copy code
 
 ### Steps
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/rainfall-analysis.git
+   git clone https://github.com/bibeksubedi0001/Rainfall-Harvesting.git
    cd rainfall-analysis
 Install dependencies:
 
-bash
-Copy code
 pip install -r requirements.txt
 Add your input data files (Building_Rooftop_Area_Data.csv, Precipitation_Data.csv) to the data/ directory.
 
 Run the script:
 
-bash
-Copy code
 python rainfall_analysis.py
 Outputs
 Visualizations
@@ -123,18 +109,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 Contact
 For questions or suggestions, feel free to reach out:
 
-Email: your-email@example.com
-GitHub: Your GitHub Profile
-yaml
-Copy code
+Email: 078bce035.bibek@pcampus.edu.np
+GitHub: https://github.com/bibeksubedi0001
 
 ---
-
-### **How to Use This `README.md`**
-1. Copy and save the content into a file named `README.md` in your project directory.
-2. Replace placeholders like `your-username`, `your-email@example.com`, and example links/images with your actual details.
-3. Add it to your GitHub repository when pushing the project:
-   ```bash
-   git add README.md
-   git commit -m "Add project documentation"
-   git push origin main
