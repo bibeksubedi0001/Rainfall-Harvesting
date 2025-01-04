@@ -58,19 +58,26 @@ Add your input data files (Building_Rooftop_Area_Data.csv, Precipitation_Data.cs
 Run the script:
 
 python rainfall_analysis.py
-Outputs
 Visualizations
 Monthly Rainfall Trends: monthly_rainfall.png
+
 Seasonal Contribution to Rainfall: seasonal_contribution.png
+
 Cumulative Rainfall Trends: cumulative_rainfall.png
+
 Rainfall Distribution:
 Histogram: rainfall_distribution.png
+
 Boxplot: rainfall_boxplot.png
+
 Efficiency Simulations: efficiency_simulation.png
+
 Top Buildings by Collection Potential: top_buildings.png
+
 Data Files
 rainwater_potential.csv: Total rainwater harvesting potential for each building.
 daily_rainfall.csv: Daily rainfall data with cumulative trends and seasonal classifications.
+
 How It Works
 Data Aggregation:
 
@@ -78,14 +85,7 @@ Rainfall data is aggregated into daily, monthly, and seasonal totals.
 Rainwater Potential Calculation:
 
 Uses the formula:
-Water Collection (L)
-=
-Rainfall (mm)
-×
-Rooftop Area (m²)
-×
-Runoff Coefficient
-Water Collection (L)=Rainfall (mm)×Rooftop Area (m²)×Runoff Coefficient
+Water Collection (L)=Rainfall (mm) × Rooftop Area (m²) × Runoff Coefficient
 Default runoff coefficient is 0.9.
 Efficiency Simulation:
 
@@ -110,6 +110,7 @@ Contact
 For questions or suggestions, feel free to reach out:
 
 Email: 078bce035.bibek@pcampus.edu.np
+
 GitHub: https://github.com/bibeksubedi0001
 
 ---
