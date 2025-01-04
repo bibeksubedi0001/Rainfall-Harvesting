@@ -29,7 +29,7 @@ This project calculates and visualizes the potential for rainwater harvesting in
 ```
 Rainfall-Analysis/
 │
-├── rainfall_analysis.py      # Main script for analysis and visualizations
+├── rainfall.py      # Main script for analysis and visualizations
 ├── data/
 │   ├── Building_Rooftop_Area_Data.csv   # Rooftop data (input file)
 │   ├── Precipitation_Data.csv           # Rainfall data (input file)
@@ -86,7 +86,7 @@ Rainfall-Analysis/
 
 4. Run the script:
    ```bash
-   python rainfall_analysis.py
+   python rainfall.py
    ```
 
 ---
