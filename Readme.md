@@ -1,35 +1,32 @@
-Rainfall Harvesting Potential Analysis
+# Rainfall Harvesting Potential Analysis
 
 This project calculates and visualizes the potential for rainwater harvesting in urban areas. By analyzing rainfall data and rooftop areas, it provides detailed insights into rainwater collection potential, seasonal contributions, and efficiency simulations at varying runoff coefficients.
 
-Features
+---
 
-Rainfall Data Analysis:
+## Features
 
-Monthly and seasonal rainfall trends.
+- **Rainfall Data Analysis**:
+  - Monthly and seasonal rainfall trends.
+  - Cumulative rainfall visualization.
+  - Rainfall distribution with outliers highlighted.
 
-Cumulative rainfall visualization.
+- **Rainwater Harvesting Potential**:
+  - Calculates total water collection potential for buildings.
+  - Identifies top buildings by collection potential.
 
-Rainfall distribution with outliers highlighted.
+- **Efficiency Simulations**:
+  - Compares water collection potential across different runoff coefficients.
 
-Rainwater Harvesting Potential:
+- **Comprehensive Visualizations**:
+  - Bar plots, pie charts, histograms, and cumulative trends.
+  - Outputs stored in a structured directory.
 
-Calculates total water collection potential for buildings.
+---
 
-Identifies top buildings by collection potential.
+## Project Structure
 
-Efficiency Simulations:
-
-Compares water collection potential across different runoff coefficients.
-
-Comprehensive Visualizations:
-
-Bar plots, pie charts, histograms, and cumulative trends.
-
-Outputs stored in a structured directory.
-
-Project Structure
-
+```
 Rainfall-Analysis/
 │
 ├── rainfall_analysis.py      # Main script for analysis and visualizations
@@ -47,130 +44,119 @@ Rainfall-Analysis/
 ├── rainwater_potential.csv   # Building-wise rainwater potential (output)
 ├── daily_rainfall.csv        # Daily rainfall and trends (output)
 ├── README.md                 # Project documentation
+```
 
-Input Data
+---
 
-Building Rooftop Area Data:
+## Input Data
 
-File: Building_Rooftop_Area_Data.csv
+1. **Building Rooftop Area Data**:
+   - File: `Building_Rooftop_Area_Data.csv`
+   - Columns:
+     - `Building ID`: Unique identifier for each building.
+     - `Rooftop Area (m²)`: Area of the rooftop in square meters.
 
-Columns:
+2. **Precipitation Data**:
+   - File: `Precipitation_Data.csv`
+   - Columns:
+     - `DateTime`: Date and time of rainfall.
+     - `Rainfall (mm/hr)`: Rainfall intensity in millimeters per hour.
 
-Building ID: Unique identifier for each building.
+---
 
-Rooftop Area (m²): Area of the rooftop in square meters.
+## Installation
 
-Precipitation Data:
+### Prerequisites
+- Python 3.8 or later
+- Required libraries: `pandas`, `matplotlib`, `seaborn`, `numpy`
 
-File: Precipitation_Data.csv
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/bibeksubedi0001/rainfall-harvesting.git
+   cd rainfall-analysis
+   ```
 
-Columns:
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-DateTime: Date and time of rainfall.
+3. Add your input data files (`Building_Rooftop_Area_Data.csv`, `Precipitation_Data.csv`) to the `data/` directory.
 
-Rainfall (mm/hr): Rainfall intensity in millimeters per hour.
+4. Run the script:
+   ```bash
+   python rainfall_analysis.py
+   ```
 
-Installation
+---
 
-Prerequisites
+## Outputs
 
-Python 3.8 or later
+### Visualizations
+- **Monthly Rainfall Trends**: `monthly_rainfall.png`
+- **Seasonal Contribution to Rainfall**: `seasonal_contribution.png`
+- **Cumulative Rainfall Trends**: `cumulative_rainfall.png`
+- **Rainfall Distribution**:
+  - Histogram: `rainfall_distribution.png`
+  - Boxplot: `rainfall_boxplot.png`
+- **Efficiency Simulations**: `efficiency_simulation.png`
+- **Top Buildings by Collection Potential**: `top_buildings.png`
 
-Required libraries: pandas, matplotlib, seaborn, numpy
+### Data Files
+- `rainwater_potential.csv`: Total rainwater harvesting potential for each building.
+- `daily_rainfall.csv`: Daily rainfall data with cumulative trends and seasonal classifications.
 
-Steps
+---
 
-Clone the repository:
+## How It Works
 
-git clone https://github.com/your-username/rainfall-analysis.git
-cd rainfall-analysis
+1. **Data Aggregation**:
+   - Rainfall data is aggregated into daily, monthly, and seasonal totals.
 
-Install dependencies:
+2. **Rainwater Potential Calculation**:
+   - Uses the formula:
+     ```
+     Water Collection (L) = Rainfall (mm) × Rooftop Area (m²) × Runoff Coefficient
+     ```
+   - Default runoff coefficient is `0.9`.
 
-pip install -r requirements.txt
+3. **Efficiency Simulation**:
+   - Simulates water collection at coefficients: `0.9`, `0.8`, `0.7`, `0.6`.
 
-Add your input data files (Building_Rooftop_Area_Data.csv, Precipitation_Data.csv) to the data/ directory.
+4. **Visualization**:
+   - Generates plots to uncover trends and actionable insights.
 
-Run the script:
+---
 
-python rainfall_analysis.py
+## Example Visualizations
 
-Outputs
+### Monthly Rainfall Trends
+![Monthly Rainfall](plots/monthly_rainfall.png)
 
-Visualizations
+### Seasonal Contribution
+![Seasonal Contribution](plots/seasonal_contribution.png)
 
-Monthly Rainfall Trends: monthly_rainfall.png
+### Cumulative Rainfall
+![Cumulative Rainfall](plots/cumulative_rainfall.png)
 
-Seasonal Contribution to Rainfall: seasonal_contribution.png
+---
 
-Cumulative Rainfall Trends: cumulative_rainfall.png
-
-Rainfall Distribution:
-
-Histogram: rainfall_distribution.png
-
-Boxplot: rainfall_boxplot.png
-
-Efficiency Simulations: efficiency_simulation.png
-
-Top Buildings by Collection Potential: top_buildings.png
-
-Data Files
-
-rainwater_potential.csv: Total rainwater harvesting potential for each building.
-
-daily_rainfall.csv: Daily rainfall data with cumulative trends and seasonal classifications.
-
-How It Works
-
-Data Aggregation:
-
-Rainfall data is aggregated into daily, monthly, and seasonal totals.
-
-Rainwater Potential Calculation:
-
-Uses the formula:
-
-Water Collection (L) = Rainfall (mm) × Rooftop Area (m²) × Runoff Coefficient
-
-Default runoff coefficient is 0.9.
-
-Efficiency Simulation:
-
-Simulates water collection at coefficients: 0.9, 0.8, 0.7, 0.6.
-
-Visualization:
-
-Generates plots to uncover trends and actionable insights.
-
-Example Visualizations
-
-Monthly Rainfall Trends
-
-
-
-Seasonal Contribution
-
-
-
-Cumulative Rainfall
-
-
-
-Contributions
+## Contributions
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
-License
+---
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## License
 
-Contact
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Contact
 
 For questions or suggestions, feel free to reach out:
 
-Email: 078bce035.bibek@pcampus.edu.np
-
-GitHub: https://github.com/bibeksubedi0001
-
-
+- **Email**: 078bce035.bibek@pcampus.edu
+- **GitHub**: https://github.com/bibeksubedi0001/Rainfall-Harvesting
