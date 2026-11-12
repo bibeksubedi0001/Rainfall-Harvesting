@@ -17,6 +17,9 @@ from rwh import (daily_rainfall, design_chart, load_hourly_rainfall, load_roofto
                  rainfall_statistics, record_years, rescale_to_annual_total, roof_inflow, simulate, smallest_capacity)
 from rwh.data import SEASON_ORDER, WET_DAY_MM, WORLD_RECORD_ANNUAL_MM
 
+# Liberation Serif has the metrics of Times New Roman and stands in where that font is not installed
+plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "Liberation Serif", "DejaVu Serif"]})
+
 HERE = Path(__file__).resolve().parent
 PLOTS, RESULTS = HERE / "plots", HERE / "results"
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
